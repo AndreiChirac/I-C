@@ -31,7 +31,7 @@ jobs:
     - name: Download a Build Artifact
       uses: actions/download-artifact@v3.0.0
       with:
-        path: /home/runner/work/I-C/I-C/lab8/dist
+        path: /home/runner/work/I-C/I-C/lab8/dist/lab8.jar
 
   
   javadoc:
