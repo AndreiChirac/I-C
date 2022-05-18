@@ -33,14 +33,12 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: my-artifact
-        path: /home/runner/work/I-C/I-C/lab8/dist/
+        path: /home/runner/work/I-C/I-C/lab8/dist
 
     - name: Display structure of downloaded files
       run: ls -R
-      working-directory: /home/runner/work/I-C/I-C/lab8/dist/
-  
-  
-  
+      working-directory: /home/runner/work/I-C/I-C/lab8/dist
+
   
   javadoc:
      runs-on: ubuntu-latest
