@@ -23,13 +23,11 @@ jobs:
         distribution: 'temurin'
     - name: Build with Ant
       run: ant -noinput -buildfile lab8/build.xml
-    
-    - name: Download a Build Artifact
+
     - uses: actions/download-artifact@v3.0.0
       with:
         path: /home/runner/work/I-C/I-C/lab8/dist
         
-    - name: Upload Artifact 
     - uses: actions/upload-artifact@v3
       with:
         path: /home/runner/work/I-C/I-C/lab8/dist
