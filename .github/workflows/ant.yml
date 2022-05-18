@@ -36,5 +36,5 @@ jobs:
       run: ls -R
       working-directory: /home/runner/work/I-C/I-C/lab8/dist
     
-    - name: javadoc-cleanup
-      uses: cicirello/javadoc-cleanup@v1.3.2
+    - name: javadoc
+      run: javadoc /home/runner/work/I-C/I-C/lab8/src/CircularLinkedList.java
