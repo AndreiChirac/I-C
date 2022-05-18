@@ -24,13 +24,12 @@ jobs:
     - name: Build with Ant
       run: ant -noinput -buildfile lab8/build.xml
 
-    - uses: actions/download-artifact@v3
+    - uses: actions/upload-artifact@v3
       with:
-        path: /home/runner/work/I-C/I-C/lab8/dist
+        name: Package
+        path: build/jar
 
     - name: Display structure of downloaded files
       run: ls -R
       working-directory: /home/runner/work/I-C/I-C/lab8/dist
-      
-    - name: Deploy Javadoc
-      uses: MathieuSoysal/Javadoc-publisher.yml@v2.0.4
+    
