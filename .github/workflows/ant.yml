@@ -30,3 +30,15 @@ jobs:
     steps:
     - name: Download a Build Artifact
       uses: actions/download-artifact@v3.0.0
+  
+  javadoc:
+     runs-on: ubuntu-latest
+     
+     steps:
+     - name: Generate Javadoc Site
+       run: ./gradlew javadocSite
+     - name: Deploy Javadoc site
+       run: |
+        git add .
+        git commit -m "Auto-generated Javadoc Site"
+        git push
