@@ -32,7 +32,6 @@ jobs:
 
     - uses: actions/download-artifact@v3
       with:
-        name: my-artifact
         path: /home/runner/work/I-C/I-C/lab8/dist
 
     - name: Display structure of downloaded files
